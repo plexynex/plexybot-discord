@@ -1,4 +1,4 @@
-Saya akan buatkan **README.md** yang lengkap untuk bot Discord Lexy kamu, mencakup semua variabel, sintaks, tabel type status, rotasi status, dan panduan lengkap.
+Saya akan buatkan **README.md** yang lengkap untuk bot Discord Lexy kamu, mencakup semua variabel, sintaks, tabel type status, rotasi status, dan panduan lengkap. ASCII art
 
 ---
 
