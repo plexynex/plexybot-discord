@@ -366,24 +366,11 @@ pm2 startup
 ### Di bagian atas file `index.js`:
 
 ```javascript
-// ========== KONFIGURASI YANG DAPAT DIUBAH ==========
-
-const PREFIX = 'lyxy';              // Ganti prefix sesuai keinginan
-
-// Konfigurasi Anti-Spam Soundboard
-const SOUNDBOARD_WINDOW_MS = 5000;  // Window waktu deteksi (ms)
-const SOUNDBOARD_LIMIT = 3;         // Batas maksimal dalam window
-const TIMEOUT_DURATION_MS = 60000;  // Durasi timeout (ms)
-
-// Channel & Role Names
-const WELCOME_CHANNEL = 'welcome';  // Nama channel sambutan
-const LOG_CHANNEL = 'log';          // Nama channel log
-const DEFAULT_ROLE = 'Member';      // Nama role untuk member baru
-
-// Status Bot
-const BOT_STATUS = 'online';        // online, idle, dnd, invisible
-const BOT_ACTIVITY_TYPE = 2;        // 0=Playing,1=Streaming,2=Listening,3=Watching,4=Custom,5=Competing
-const BOT_ACTIVITY_NAME = 'lyxy help'; // Teks status
+client.on('messageCreate', async (message) => {
+    // Baris ini dijalankan untuk SETIAP pesan yang dikirim
+    if (message.author.bot) return;
+    console.log(`📨 [${message.guild?.name} / #${message.channel.name}] ${message.author.username}: ${message.content}`);
+})
 ```
 
 ---
